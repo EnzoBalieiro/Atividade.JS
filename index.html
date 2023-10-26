@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-ceter aling-items-center vh-100">
+            
+            <!-- <h3>Configurando o bootstrap</h3> -->
+
+            <!--Temperatura-->
+            <div class="col-auto bg-secundary p-5 rounded">
+                <form onsubmit="return false">
+                    <div class="row">
+                        <div class="col">
+                            <label for="temperatura" class="form-label fw-bold text-dark">TEMPERATURA</label>
+                            <input type="number" name="TXTtemperatura" id="TXTtemperatura" class="form-control">
+                            
+                        </div>
+                    </div>
+
+                    <!--Converção-->
+                    <div class="row">
+                        <div class="col">
+                            <label for="convercao" class="form-label fw-bold text-dark">Converção</label>
+                            <select name="slcconvercao" id="slcconvercao" class="form-select">
+                                <option value=""></option>
+                                <option value="°F">°F</option>
+                                <option value="°C">°C</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!--Resultado da converção-->
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label fw-bold text-dark">Resultado: </label>
+                            <label class="form-label fw-bold text-dark" name="lblResesultado" id="lblResesultado">-</label>
+                    </div>
+
+                    <!--Botão de Converter e Botão de Limpar-->
+
+                    <div class="row">
+
+                        <!--Botão Converter-->
+                        <div class="col">
+                            <button class="btn btn-primary mt-2" name="converter" id="converter" onclick="conversor()">
+                                Converter
+                            </button>
+                        </div>
+                        <!--Botão Limpar-->
+                        <div class="col">
+                        <button class="btn btn-danger mt-2" name="btnlimpar" id="btnlimpar" onclick="limpar()">
+                            Limpar
+                        </button>
+                        </div>
+                    </div>
+                </form> 
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./conversor.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+</html>
